@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        table, th, td {
+            border: 1px solid;
+        }
+    </style>
+</head>
+<body>
+    <hr>
+    <h2>Tabelas:</h2>
+    <table>
+        <caption>Tabela 1:</caption>
+        <tr>
+            <td>
+                Minha tabela
+            </td>
+        </tr>
+    </table>
+
+    <br><br>
+
+    <table>
+        <caption>Tabela 2:</caption>
+        <tr>
+            <th>Minha tabela</th>
+        </tr>
+        <tr>
+            <td>Simples</td>
+        </tr>
+    </table>
+
+    <br><br>
+
+    <table>
+        <caption>Tabela 3:</caption>
+        <tr>
+            <td> </td>
+            <th>Monday</th>
+            <th>Tuesday</th>
+            <th>Wednesday</th>
+        </tr>
+        <tr>
+            <th>8:00-9:00</th>
+            <td>Meet with Sam</td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <th>9:00-10:00</th>
+            <td> </td>
+            <td> </td>
+            <td>Doctor Williams</td>
+        </tr>
+    </table>
+
+    <br><br>
+
+    <table>
+        <caption>Tabela 4:</caption>
+        <thead>
+            <tr>
+                <th>Minha tabela</th>
+                <th>Percentuais</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <th>Total</th>
+                <td>10%</td>
+            </tr>
+        </tfoot>
+        <tbody>
+            <tr>
+                <th>...</th>
+                <td>...</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <br><br>
+
+    <table>
+        <caption>Tabela 5:</caption>
+        <caption>Contact Information</caption>
+        <tr>
+            <td></td>
+            <td scope="col">Name</td>
+            <td scope="col">Phone#</td>
+            <td scope="col">City</td>
+        </tr>
+        <tr>
+            <td>1.</td>
+            <td scope="row">Joel Garner</td>
+            <td>412-212-5421</td>
+            <td>Pittsburgh</td>
+        </tr>
+        <tr>
+            <td>2.</td>
+            <td scope="row">Clive Lloyd</td>
+            <td>410-306-5400</td>
+            <td>Baltimore</td>
+        </tr>
+    </table>
+
+    <br><br>
+
+    <table>
+        <caption>Tabela 6:</caption>
+        <tr>
+            <th rowspan="2" id="h">Homework</th>
+            <th colspan="3" id="e">Exams</th>
+            <th colspan="3" id="p">Projects</th>
+        </tr>
+        <tr>
+            <th id="e1" headers="e">1</th>
+            <th id="e2" headers="e">2</th>
+            <th id="ef" headers="e">Final</th>
+            <th id="p1" headers="p">1</th>
+            <th id="p2" headers="p">2</th>
+            <th id="pf" headers="p">Final</th>
+        </tr>
+        <tr>
+            <td headers="h">15%</td>
+            <td headers="e e1">15%</td>
+            <td headers="e e2">15%</td>
+            <td headers="e ef">20%</td>
+            <td headers="p p1">10%</td>
+            <td headers="p p2">10%</td>
+            <td headers="p pf">15%</td>
+        </tr>
+    </table>
+
+    <hr><br>
+
+    <h2>Formulários:</h2>
+
+    Nome <input type="text" name="nome"/> <br><br>
+
+    <label for="firstname">First name:</label>
+    <input type="text" name="firstname" id="firstname"/> <br><br>
+
+    <input type="checkbox" id="markuplang" name="computerskills">
+    <label for="markuplang">HTML</label> <br><br>
+
+    <fieldset>
+        <legend>Phone number</legend>
+        <input id="areaCode" title="Area Code" type="text" size="3" value="">
+        <input id="exchange" title=" First three digits of phone number" type="text" value="" size="8">
+        <input id="lastDigits" title="Last four digits of phone number" type="text" value="" size="8">
+    </fieldset>  <br><br>
+
+    <input type="image" src="enviar.png" style="width:150px;" alt="Enviar formulário"/> <br><br>
+
+    <label for="op1">Café da manhã</label>
+    <input type="radio" id="op1"> <br>
+    <label for="op2">Almoço</label>
+    <input type="radio" id="op2"> <br>
+    <label for="op3">Jantar</label>
+    <input type="radio" id="op3"> <br><br>
+
+    <form action="http://example.com/adduser" method="post">
+        <fieldset>
+            <legend>Residential Address</legend>
+
+            <label for="raddress">Address: </label>
+            <input type="text" id="raddress" name="raddress"/> <br>
+
+            <label for="rzip">Postal/Zip Code: </label>
+            <input type="text" id="rzip" name="rzip"/> <br>
+
+            ...more residential address information...
+        </fieldset>
+        <fieldset>
+            <legend>Postal Address</legend>
+
+            <label for="paddress">Address: </label>
+            <input type="text" id="paddress" name="paddress"/> <br>
+
+            <label for="pzip">Postal/Zip Code: </label>
+            <input type="text" id="pzip" name="pzip"/> <br>
+            ...more postal address information...
+        </fieldset>
+    </form> <br><br>
+
+    <form action="#" method="post">
+        <label for="food">What is your favorite food?</label> <br>
+        <select id="food" name="food">
+            <optgroup label="Fruits">
+                <option value="1">Apples</option>
+                <option value="3">Bananas</option>
+                <option value="4">Peaches</option>
+            </optgroup>
+            <optgroup label="Vegetables">
+                <option value="2">Carrots</option>
+                <option value="6">Cucumbers</option>
+            </optgroup>
+            <optgroup label="Baked Goods">
+                <option value="8">Apple Pie</option>
+                <option value="9">Chocolate Cake</option>
+            </optgroup>
+        </select>
+    </form> <br><br>
+
+    <form>
+        <fieldset>
+            <label for="form-1">Name (required)</label>
+            <input id="form-1" name="name" type="text" required> <br>
+
+            <label for="form-2">Title</label>
+            <input id="form-2" name="title" type="text" required> <br>
+
+            <label for="form-4">Shoesize</label>
+            <input id="form-4" name="age" type="number" min="18" max="25"> <br>
+
+            <label for="form-5">Email (required)</label>
+            <input id="form-5" name="email" type="email" required> <br>
+
+            <label for="form-6">Webpage</label>
+            <input id="form-6" name="url" type="url"> <br>
+
+            <label for="form-7">Date of Birth</label>
+            <input id="form-7" name="dob" type="date"> <br>
+
+            <label for="form-8">Attractiveness</label>
+            <input id="form-8" name="a" type="range" min="1" max="10" value="0"> <br>
+        </fieldset>
+    </form>
+</body>
+</html>
